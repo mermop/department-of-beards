@@ -1,9 +1,8 @@
 // webpack.config.js
-var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    site: './source/javascripts/site.js'
+    site: './source/javascripts/index.js'
   },
 
   output: {

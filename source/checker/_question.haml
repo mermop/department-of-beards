@@ -1,8 +1,13 @@
-%section{id: "js-checker-question-#{question.id}", class: "js-checker-question is-#{show_initially ? "active" : "hidden"}"}
+%section{id: "js-checker-question-#{index}", class: "js-checker-section is-#{show_initially ? "active" : "hidden"}"}
   %h2=question.question
   .c-responses.o-grid
     - question.responses.each do |response|
-      %input{type: "radio", name: question.id, class: "c-responses__response-input", value: response.id, id: "js-checker-question-#{question.id}-#{response.id}", data: {proceed: response.proceed_to}}
-      %label.o-grid__item.o-grid__item--half.c-responses__response{for: "js-checker-question-#{question.id}-#{response.id}"}
+      %input{type: "radio", name: question.id, class: "c-responses__response-input", value: response.id, id: "js-checker-question-#{index}-#{response.id}", data: {proceed: response.proceed_to}}
+      %label.o-grid__item.o-grid__item--half.c-responses__response{for: "js-checker-question-#{index}-#{response.id}"}
         %h3=response.heading
         =response.body
+  .js-checker-actions.c-checker__actions.o-grid.o-grid--centred
+    .o-grid__item.o-grid__item--half
+      .o-grid.o-grid--space-between
+        .o-grid__item.o-grid__item--half
+          %button.c-button.js-checker-next Next

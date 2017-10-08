@@ -9,13 +9,6 @@ title: Do I have to pay the Australian Beard Tax (ABT)?
   .o-grid__item.o-grid__item--two-thirds
     - data.checker.questions.each_with_index do |question, index|
       - show_initially = true if index == 0
-      = partial "checker/question", locals: {question: question, show_initially: show_initially}
+      = partial "checker/question", locals: {question: question, index: index, show_initially: show_initially}
     - data.checker.answers.each do |answer|
       = partial "checker/answer", locals: {answer: answer}
-.js-checker-actions.c-checker__actions.o-grid.o-grid--centred
-  .o-grid__item.o-grid__item--half
-    .o-grid.o-grid--space-between
-      .o-grid__item.o-grid__item--half
-        %button.c-button#js-checker-back.is-hidden Back
-      .o-grid__item.o-grid__item--half
-        %button.c-button#js-checker-next Next
