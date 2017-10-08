@@ -22,20 +22,36 @@
 <div class='c-content'>
 <h1>Do I have to pay the Australian Beard Tax (ABT)?</h1>
 <p>Take our convenient quiz to find out whether you have to pay the Australian Beard Tax (ABT).</p>
-<div class='o-grid o-grid--centred'>
+<div class='o-grid o-grid--centred c-checker'>
 <div class='o-grid__item o-grid__item--two-thirds'>
 <section class='js-checker-question is-active' data-beard='goatee' id='js-checker-question-chin'>
 <h2>Is there facial hair on your chin?</h2>
-<div class='c-responses'>
-<input data-proceed='question-length' id='js-checker-question-chin-yes' name='chin' type='radio' value='yes'>
-<label for='js-checker-question-chin-yes'>Yes</label>
-<input data-proceed='question-muttonchops' id='js-checker-question-chin-no' name='chin' type='radio' value='no'>
-<label for='js-checker-question-chin-no'>No</label>
+<div class='c-responses o-grid'>
+<input class='c-responses__response-input' data-proceed='question-length' id='js-checker-question-chin-yes' name='chin' type='radio' value='yes'>
+<label class='o-grid__item o-grid__item--half c-responses__response' for='js-checker-question-chin-yes'>
+<h3>Yes</h3>
+<p>Select this if you have:</p>
+<ul>
+<li>A full beard</li>
+<li>A "goatee"</li>
+<li>A "soul patch"</li>
+<li>Any other style of facial hair that includes facial hair on the chin region</li>
+</ul>
+</label>
+<input class='c-responses__response-input' data-proceed='question-muttonchops' id='js-checker-question-chin-no' name='chin' type='radio' value='no'>
+<label class='o-grid__item o-grid__item--half c-responses__response' for='js-checker-question-chin-no'>
+<h3>No</h3>
+<p>Select this if:</p>
+<ul>
+<li>you have fewer than 20 coarse hairs growing on your chin, or</li>
+<li>if the hair on your chin is shaved off.</li>
+</ul>
+</label>
 </div>
 </section>
 <section class='js-checker-question is-hidden' data-beard='muttonchops' id='js-checker-question-muttonchops'>
 <h2>Do you have an unbroken line of hair from ear to ear?</h2>
-<div class='c-responses'>
+<div class='c-responses o-grid'>
 <input data-proceed='question-length' id='js-checker-question-muttonchops-yes' name='muttonchops' type='radio' value='yes'>
 <label for='js-checker-question-muttonchops-yes'>Yes</label>
 <input data-proceed='result-no' id='js-checker-question-muttonchops-no' name='muttonchops' type='radio' value='no'>
@@ -44,7 +60,7 @@
 </section>
 <section class='js-checker-question is-hidden' data-beard='full' id='js-checker-question-length'>
 <h2>Is the beard more than 0.5mm at its longest point?</h2>
-<div class='c-responses'>
+<div class='c-responses o-grid'>
 <input data-proceed='question-exemptions' id='js-checker-question-length-yes' name='length' type='radio' value='yes'>
 <label for='js-checker-question-length-yes'>Yes</label>
 <input data-proceed='result-no' id='js-checker-question-length-no' name='length' type='radio' value='no'>
@@ -53,7 +69,7 @@
 </section>
 <section class='js-checker-question is-hidden' data-beard='solemn' id='js-checker-question-exemptions'>
 <h2>Do you have your beard because of religious or cultural reasons?</h2>
-<div class='c-responses'>
+<div class='c-responses o-grid'>
 <input data-proceed='result-exemption' id='js-checker-question-exemptions-yes' name='exemptions' type='radio' value='yes'>
 <label for='js-checker-question-exemptions-yes'>Yes</label>
 <input data-proceed='result-yes' id='js-checker-question-exemptions-no' name='exemptions' type='radio' value='no'>
@@ -66,13 +82,13 @@
 </section>
 <section class='js-checker-result is-hidden' id='js-checker-result-exemption'>
 <h2>You may be eligible for an exemption from the Australian Beard Tax (ABT).</h2>
-<p>Please enquire for a cost-free BeardCoin™.</p>
+<p>Please enquire for a cost-free BeardCoin.</p>
 </section>
 <section class='js-checker-result is-hidden' id='js-checker-result-yes'>
 <h2>Yes, you have to pay the Australian Beard Tax.</h2>
 <p>You must pay the Australian Beard Tax for each financial year during which you have a beard.</p>
-<p>Please pay the Australian Beard Tax here. You will be issued a BeardCoin™, which you must carry with you at all times while wearing a beard.</p>
-<p>If you do not have a valid BeardCoin™, officers of the Department of Beards may detain you and issue a fine. Repeat offenders may be detained and shaved.</p>
+<p>Please pay the Australian Beard Tax here. You will be issued a BeardCoin, which you must carry with you at all times while wearing a beard.</p>
+<p>If you do not have a valid BeardCoin, officers of the Department of Beards may detain you and issue a fine. Repeat offenders may be detained and shaved.</p>
 <h3>Beard Tax FAQs</h3>
 <div class='c-faq'>
 <div class='c-faq__question'>
@@ -97,7 +113,7 @@
 <h4>Do I need to pay the Australian Beard Tax (ABT) if I only have a beard for part of the financial year?</h4>
 </div>
 <div class='c-faq__answer'>
-<p>Yes. However, a BeardToken™ may be redeemed at registered barbers for a beard shaving service and/or partial refund.</p>
+<p>Yes. However, a BeardToken may be redeemed at registered barbers for a beard shaving service and/or partial refund.</p>
 </div>
 </div>
 <div class='c-faq'>
@@ -105,11 +121,23 @@
 <h4>I don't normally wear a beard, but I sometimes just don't shave for a while. Do I need to pay the Australian Beard Tax (ABT)?</h4>
 </div>
 <div class='c-faq__answer'>
-<p>Yes. Any beard over 5mm that either covers the chin or connects the hairline from left to right is covered by the legislation. Wearing a beard without a valid BeardToken™ is an offense.</p>
+<p>Yes. Any beard over 5mm that either covers the chin or connects the hairline from left to right is covered by the legislation. Wearing a beard without a valid BeardToken is an offense.</p>
 </div>
 </div>
 
 </section>
+</div>
+</div>
+<div class='js-checker-actions c-checker__actions o-grid o-grid--centred'>
+<div class='o-grid__item o-grid__item--half'>
+<div class='o-grid o-grid--space-between'>
+<div class='o-grid__item o-grid__item--half'>
+<button class='c-button is-hidden' id='js-checker-back'>Back</button>
+</div>
+<div class='o-grid__item o-grid__item--half'>
+<button class='c-button' id='js-checker-next'>Next</button>
+</div>
+</div>
 </div>
 </div>
 
