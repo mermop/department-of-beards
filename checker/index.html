@@ -14,6 +14,7 @@
 <nav class='c-menu'>
 <a href="/department-of-beards/" class="c-menu__item">Department of Beards
 </a><a href="/department-of-beards/about" class="c-menu__item">About
+</a><a href="/department-of-beards/faq" class="c-menu__item">FAQ
 </a><a href="/department-of-beards/contact" class="c-menu__item">Contact Us
 </a><a href="/department-of-beards/checker" class="c-menu__item">Beard Checker
 </a></nav>
@@ -24,108 +25,85 @@
 <p>Take our convenient quiz to find out whether you have to pay the Australian Beard Tax (ABT).</p>
 <div class='o-grid o-grid--centred c-checker'>
 <div class='o-grid__item o-grid__item--two-thirds'>
-<section class='js-checker-question is-active' data-beard='goatee' id='js-checker-question-chin'>
+<section class='js-checker-question is-active' id='js-checker-question-chin'>
 <h2>Is there facial hair on your chin?</h2>
 <div class='c-responses o-grid'>
 <input class='c-responses__response-input' data-proceed='question-length' id='js-checker-question-chin-yes' name='chin' type='radio' value='yes'>
 <label class='o-grid__item o-grid__item--half c-responses__response' for='js-checker-question-chin-yes'>
 <h3>Yes</h3>
-<p>Select this if you have:</p>
-<ul>
-<li>A full beard</li>
-<li>A "goatee"</li>
-<li>A "soul patch"</li>
-<li>Any other style of facial hair that includes facial hair on the chin region</li>
-</ul>
+<p>Select this if you have:</p> <ul><li>a goatee</li><li>a 'soul patch'</li><li>a full beard</li><li>more than 20 coarse facial hairs on the chin for any other reason.</li></ul>
 </label>
 <input class='c-responses__response-input' data-proceed='question-muttonchops' id='js-checker-question-chin-no' name='chin' type='radio' value='no'>
 <label class='o-grid__item o-grid__item--half c-responses__response' for='js-checker-question-chin-no'>
 <h3>No</h3>
-<p>Select this if:</p>
-<ul>
-<li>you have fewer than 20 coarse hairs growing on your chin, or</li>
-<li>if the hair on your chin is shaved off.</li>
-</ul>
+<p>Select this if you have fewer than 20 coarse hairs on your chin.</p>
 </label>
 </div>
 </section>
-<section class='js-checker-question is-hidden' data-beard='muttonchops' id='js-checker-question-muttonchops'>
+
+<section class='js-checker-question is-hidden' id='js-checker-question-muttonchops'>
 <h2>Do you have an unbroken line of hair from ear to ear?</h2>
 <div class='c-responses o-grid'>
-<input data-proceed='question-length' id='js-checker-question-muttonchops-yes' name='muttonchops' type='radio' value='yes'>
-<label for='js-checker-question-muttonchops-yes'>Yes</label>
-<input data-proceed='result-no' id='js-checker-question-muttonchops-no' name='muttonchops' type='radio' value='no'>
-<label for='js-checker-question-muttonchops-no'>No</label>
+<input class='c-responses__response-input' data-proceed='question-length' id='js-checker-question-muttonchops-yes' name='muttonchops' type='radio' value='yes'>
+<label class='o-grid__item o-grid__item--half c-responses__response' for='js-checker-question-muttonchops-yes'>
+<h3>Yes</h3>
+<p>Select this if you have:</p> <ul><li>a moustache which reaches your ears</li><li>'mutton chops' that link with any other facial hair</li></ul>
+</label>
+<input class='c-responses__response-input' data-proceed='answer-no' id='js-checker-question-muttonchops-no' name='muttonchops' type='radio' value='no'>
+<label class='o-grid__item o-grid__item--half c-responses__response' for='js-checker-question-muttonchops-no'>
+<h3>No</h3>
+<p>Select this if you have:</p> <ul><li>a moustache which does not reach your ears</li><li>'mutton chops' that do not link with any other facial hair</li></ul>
+</label>
 </div>
 </section>
-<section class='js-checker-question is-hidden' data-beard='full' id='js-checker-question-length'>
+
+<section class='js-checker-question is-hidden' id='js-checker-question-length'>
 <h2>Is the beard more than 0.5mm at its longest point?</h2>
 <div class='c-responses o-grid'>
-<input data-proceed='question-exemptions' id='js-checker-question-length-yes' name='length' type='radio' value='yes'>
-<label for='js-checker-question-length-yes'>Yes</label>
-<input data-proceed='result-no' id='js-checker-question-length-no' name='length' type='radio' value='no'>
-<label for='js-checker-question-length-no'>No</label>
+<input class='c-responses__response-input' data-proceed='question-exemptions' id='js-checker-question-length-yes' name='length' type='radio' value='yes'>
+<label class='o-grid__item o-grid__item--half c-responses__response' for='js-checker-question-length-yes'>
+<h3>Yes</h3>
+<p>Select this if your facial hair is 0.5mm or longer at any point.</p>
+</label>
+<input class='c-responses__response-input' data-proceed='answer-no' id='js-checker-question-length-no' name='length' type='radio' value='no'>
+<label class='o-grid__item o-grid__item--half c-responses__response' for='js-checker-question-length-no'>
+<h3>No</h3>
+<p>Select this if your facial hair is uniformly shorter than 0.5mm and is kept this way regularly.</p>
+</label>
 </div>
 </section>
-<section class='js-checker-question is-hidden' data-beard='solemn' id='js-checker-question-exemptions'>
+
+<section class='js-checker-question is-hidden' id='js-checker-question-exemptions'>
 <h2>Do you have your beard because of religious or cultural reasons?</h2>
 <div class='c-responses o-grid'>
-<input data-proceed='result-exemption' id='js-checker-question-exemptions-yes' name='exemptions' type='radio' value='yes'>
-<label for='js-checker-question-exemptions-yes'>Yes</label>
-<input data-proceed='result-yes' id='js-checker-question-exemptions-no' name='exemptions' type='radio' value='no'>
-<label for='js-checker-question-exemptions-no'>No</label>
+<input class='c-responses__response-input' data-proceed='answer-exemptions' id='js-checker-question-exemptions-yes' name='exemptions' type='radio' value='yes'>
+<label class='o-grid__item o-grid__item--half c-responses__response' for='js-checker-question-exemptions-yes'>
+<h3>Yes</h3>
+<p>Select this if your <em>primary reason</em> for growing a beard is for religious or cultural reasons, such as:</p><ul><li>Islam</li><li>Orthodox Judaism</li><li>Sikhism</li></ul>
+</label>
+<input class='c-responses__response-input' data-proceed='answer-yes' id='js-checker-question-exemptions-no' name='exemptions' type='radio' value='no'>
+<label class='o-grid__item o-grid__item--half c-responses__response' for='js-checker-question-exemptions-no'>
+<h3>No</h3>
+<p>Select this if you have a beard for reasons other than your religion or cultural traditions. Grounds for growing a beard that are not protected include:</p><ul><li>Sports clubs</li><li>Sibling rivalry</li><li>Frivolous pseudo-religions</li></ul>
+</label>
 </div>
 </section>
+
+<section class='js-checker-result is-hidden' id='js-checker-result-yes'>
+<h2>Yes, you need to pay the Australian Beard Tax (ABT).</h2>
+<p>You must pay the Australian Beard Tax for each financial year during which you have a beard.</p>
+</section>
+
 <section class='js-checker-result is-hidden' id='js-checker-result-no'>
 <h2>No, you do not have to pay the Australian Beard Tax (ABT).</h2>
-<p>If your beard grows, you may be liable.</p>
+However if your beard grows, you may be liable for the Australian Beard Tax (ABT).
 </section>
-<section class='js-checker-result is-hidden' id='js-checker-result-exemption'>
-<h2>You may be eligible for an exemption from the Australian Beard Tax (ABT).</h2>
-<p>Please enquire for a cost-free BeardCoin.</p>
-</section>
-<section class='js-checker-result is-hidden' id='js-checker-result-yes'>
-<h2>Yes, you have to pay the Australian Beard Tax.</h2>
-<p>You must pay the Australian Beard Tax for each financial year during which you have a beard.</p>
-<p>Please pay the Australian Beard Tax here. You will be issued a BeardCoin, which you must carry with you at all times while wearing a beard.</p>
-<p>If you do not have a valid BeardCoin, officers of the Department of Beards may detain you and issue a fine. Repeat offenders may be detained and shaved.</p>
-<h3>Beard Tax FAQs</h3>
-<div class='c-faq'>
-<div class='c-faq__question'>
-<h4>What if I can't afford to pay the Australian Beard Tax (ABT)?</h4>
-</div>
-<div class='c-faq__answer'>
-<p>If you earn under $35,000, you may be eligible for a shaving kit.</p>
-<p>Enquire at <a href="https://www.humanservices.gov.au/individuals/centrelink">Centrelink</a> for a complimentary Beard Assistance Kit (BAK).</p>
-</div>
-</div>
-<div class='c-faq'>
-<div class='c-faq__question'>
-<h4>Are minors under the age of 18 required to pay the Australian Beard Tax (ABT)?</h4>
-</div>
-<div class='c-faq__answer'>
-<p>Yes, minors are required to pay the ABT.</p>
-<p>Enquire at <a href="https://www.humanservices.gov.au/individuals/centrelink">Centrelink</a> for a Bearded Teenager Shaving Kit (BTSK).</p>
-</div>
-</div>
-<div class='c-faq'>
-<div class='c-faq__question'>
-<h4>Do I need to pay the Australian Beard Tax (ABT) if I only have a beard for part of the financial year?</h4>
-</div>
-<div class='c-faq__answer'>
-<p>Yes. However, a BeardToken may be redeemed at registered barbers for a beard shaving service and/or partial refund.</p>
-</div>
-</div>
-<div class='c-faq'>
-<div class='c-faq__question'>
-<h4>I don't normally wear a beard, but I sometimes just don't shave for a while. Do I need to pay the Australian Beard Tax (ABT)?</h4>
-</div>
-<div class='c-faq__answer'>
-<p>Yes. Any beard over 5mm that either covers the chin or connects the hairline from left to right is covered by the legislation. Wearing a beard without a valid BeardToken is an offense.</p>
-</div>
-</div>
 
+<section class='js-checker-result is-hidden' id='js-checker-result-exemptions'>
+<h2>You may be eligible for an exemption from the Australian Beard Tax (ABT).</h2>
+Please enquire for a cost-free BeardCoin.
 </section>
+
 </div>
 </div>
 <div class='js-checker-actions c-checker__actions o-grid o-grid--centred'>
