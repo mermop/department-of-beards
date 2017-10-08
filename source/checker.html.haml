@@ -7,66 +7,11 @@ title: Do I have to pay the Australian Beard Tax (ABT)?
 
 .o-grid.o-grid--centred.c-checker
   .o-grid__item.o-grid__item--two-thirds
-
-    %section.js-checker-question.is-active#js-checker-question-chin(data-beard="goatee")
-      %h2 Is there facial hair on your chin?
-      .c-responses.o-grid
-        %input{type: "radio", name: "chin", class: "c-responses__response-input", value: "yes", id: "js-checker-question-chin-yes", data: {proceed: "question-length"}}
-        %label.o-grid__item.o-grid__item--half.c-responses__response(for="js-checker-question-chin-yes")
-          %h3 Yes
-          %p Select this if you have:
-          %ul
-            %li A full beard
-            %li A "goatee"
-            %li A "soul patch"
-            %li Any other style of facial hair that includes facial hair on the chin region
-        %input{type: "radio", name: "chin", class: "c-responses__response-input", value: "no", id: "js-checker-question-chin-no", data: {proceed: "question-muttonchops"}}
-        %label.o-grid__item.o-grid__item--half.c-responses__response(for="js-checker-question-chin-no")
-          %h3 No
-          %p Select this if:
-          %ul
-            %li you have fewer than 20 coarse hairs growing on your chin, or
-            %li if the hair on your chin is shaved off.
-    %section.js-checker-question.is-hidden#js-checker-question-muttonchops(data-beard="muttonchops")
-      %h2 Do you have an unbroken line of hair from ear to ear?
-      .c-responses.o-grid
-        %input{type: "radio", name: "muttonchops", value: "yes", id: "js-checker-question-muttonchops-yes", data: {proceed: "question-length"}}
-        %label(for="js-checker-question-muttonchops-yes") Yes
-        %input{type: "radio", name: "muttonchops", value: "no", id: "js-checker-question-muttonchops-no", data: {proceed: "result-no"}}
-        %label(for="js-checker-question-muttonchops-no") No
-
-    %section.js-checker-question.is-hidden#js-checker-question-length(data-beard="full")
-      %h2 Is the beard more than 0.5mm at its longest point?
-      .c-responses.o-grid
-        %input{type: "radio", name: "length", value: "yes", id: "js-checker-question-length-yes", data: {proceed: "question-exemptions"}}
-        %label(for="js-checker-question-length-yes") Yes
-        %input{type: "radio", name: "length", value: "no", id: "js-checker-question-length-no", data: {proceed: "result-no"}}
-        %label(for="js-checker-question-length-no") No
-
-    %section.js-checker-question.is-hidden#js-checker-question-exemptions(data-beard="solemn")
-      %h2 Do you have your beard because of religious or cultural reasons?
-      .c-responses.o-grid
-        %input{type: "radio", name: "exemptions", value: "yes", id: "js-checker-question-exemptions-yes", data: {proceed: "result-exemption"}}
-        %label(for="js-checker-question-exemptions-yes") Yes
-        %input{type: "radio", name: "exemptions", value: "no", id: "js-checker-question-exemptions-no", data: {proceed: "result-yes"}}
-        %label(for="js-checker-question-exemptions-no") No
-
-    %section.js-checker-result.is-hidden#js-checker-result-no
-      %h2 No, you do not have to pay the Australian Beard Tax (ABT).
-      %p If your beard grows, you may be liable.
-
-    %section.js-checker-result.is-hidden#js-checker-result-exemption
-      %h2 You may be eligible for an exemption from the Australian Beard Tax (ABT).
-      %p Please enquire for a cost-free BeardCoin.
-
-    %section.js-checker-result.is-hidden#js-checker-result-yes
-      %h2 Yes, you have to pay the Australian Beard Tax.
-      %p You must pay the Australian Beard Tax for each financial year during which you have a beard.
-      %p Please pay the Australian Beard Tax here. You will be issued a BeardCoin, which you must carry with you at all times while wearing a beard.
-      %p If you do not have a valid BeardCoin, officers of the Department of Beards may detain you and issue a fine. Repeat offenders may be detained and shaved.
-      %h3 Beard Tax FAQs
-      = partial "payment_faqs"
-
+    - data.checker.questions.each_with_index do |question, index|
+      - show_initially = true if index == 0
+      = partial "checker/question", locals: {question: question, show_initially: show_initially}
+    - data.checker.answers.each do |answer|
+      = partial "checker/answer", locals: {answer: answer}
 .js-checker-actions.c-checker__actions.o-grid.o-grid--centred
   .o-grid__item.o-grid__item--half
     .o-grid.o-grid--space-between
