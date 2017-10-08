@@ -1,0 +1,16 @@
+.o-container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+}
+
+.o-grid {
+  display: flex;
+  &--centred {
+    justify-content: center;
+  }
+  &__item {
+    &--half {
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+// This is a render-blocking CSS file for critical styles.
+
+@import "partials/resets";
+@import "partials/variables";
+@import "partials/core_webfonts";
+@import "partials/grid";
+@import "partials/typography";
+@import "partials/menu";
+
+.c-content {
+  background-color: #FFF;
+  font-family: $body-font;
+  padding: $gutter;
+  min-height: 400px;
+}
+
+body {
+  background-color: $light-grey;
+}

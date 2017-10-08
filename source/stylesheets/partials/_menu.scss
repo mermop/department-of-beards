@@ -1,0 +1,21 @@
+.c-menu {
+  height: $menu-height;
+  font-family: $body-font;
+  background-color: $teal;
+  padding: $gutter;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  &__item {
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover, &:active, &.current {
+      color: #000;
+    }
+  }
+  &__room {
+    padding-top: $menu-height;
+  }
+}

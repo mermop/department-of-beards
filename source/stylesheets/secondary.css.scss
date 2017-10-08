@@ -1,0 +1,7 @@
+// This is a non-render-blocking file for styles that can be loaded after the page's first render
+// For example: animations, styles for elements that are always a click away, etc
+
+@import "partials/variables";
+@import "partials/secondary_webfonts";
+@import "partials/caption";
+@import "partials/footer";

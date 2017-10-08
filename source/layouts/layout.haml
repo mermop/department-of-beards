@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+    / Use the title from a page's frontmatter if it has one
+    %title= "The Department of Beards#{" • " + current_page.data.title if current_page.data.title}"
+    %link{rel: "stylesheet", href: asset_path(:css, "stylesheets/core")}
+    %link{rel: "preload", as: "style", href: asset_path(:css, "stylesheets/secondary")}
+  %body
+    %link{rel: "stylesheet", href: asset_path(:css, "stylesheets/secondary")}
+    = partial "layouts/nav"
+    .c-menu__room.o-container
+      .c-content
+        = yield
+    = partial "layouts/footer"
+    = javascript_include_tag "site"
