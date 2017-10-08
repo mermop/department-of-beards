@@ -21,7 +21,16 @@ bundle exec middleman server
 
 ## Deploying
 
+This site is deployed through GitHub Pages. To deploy, provided you have write permission on the repository, use the command:
+
+```
+bundle exec middleman deploy
+```
+
 ## Acknowledgements
 
+This codebase takes some inspiration from:
+
 https://github.com/icelab/middleman-skeleton
+
 https://github.com/matthewlehner/middleman-webpack

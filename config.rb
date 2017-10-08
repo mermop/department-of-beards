@@ -13,6 +13,12 @@ activate :external_pipeline,
           source: ".tmp/dist",
           latency: 1
 
+activate :deploy do |config|
+  config.deploy_method = :git
+  config.branch = "gh-pages"
+  config.build_before = true
+end
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
