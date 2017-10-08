@@ -1,4 +1,16 @@
-= image_tag("stacked-logo.png")
-%h1 The Department of Beards
-%h3 The Beard is a Superfluous Burden
-%p The Department of Beards supervises the collection of the Australian Beard Tax (ABT).
+.o-grid.o-grid--centred.h-centred
+  .o-grid__item--half
+    = image_tag("stacked-logo.png")
+    %h1 The Department of Beards
+    %p.t-emphasis The Beard is a Superfluous Burden
+    %p The Department of Beards supervises the collection of the Australian Beard Tax (ABT).
+%hr.t-hr
+%section
+  %h2 News
+  .o-grid
+    .o-grid__item--half
+      %h3 Shaving Tips for Enlightened Australians
+      %p The Department of Beards encourages Australians to maintain healthy grooming standards. 
+    .o-grid__item--half
+      .c-embed
+        %iframe(class="c-embed__item" id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/bjtjeUcoxkg" frameborder="0")

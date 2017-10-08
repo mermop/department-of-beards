@@ -5,12 +5,19 @@
 
 .o-grid {
   display: flex;
+  flex-wrap: wrap;
   &--centred {
     justify-content: center;
+  }
+  &--space-between {
+    justify-content: space-between;
   }
   &__item {
     &--half {
       width: 50%;
+      @media(max-width: 640px) {
+        width: 100%;
+      }
     }
     &--one-third {
       width: percentage(1 / 3);

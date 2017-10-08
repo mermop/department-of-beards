@@ -1,0 +1,35 @@
+.c-button {
+  background-color: $teal;
+  padding: 10px 25px;
+  line-height: 1.5;
+  border: none;
+  font-weight: bold;
+  color: #FFF;
+  font-size: 1.25em;
+  cursor: pointer;
+  &:hover, &:active {
+    background-color: darken($teal, 10%);
+  }
+}
+
+.c-checker {
+  &__actions {
+    margin-top: $gutter * 2;
+  }
+}
+
+.c-responses {
+  &__response {
+    min-height: 200px;
+    padding: $gutter;
+  }
+  &__response-input {
+    display: none;
+    &+label {
+      border: 4px solid $light-grey;
+    }
+    &:checked+label {
+      border: 4px solid $teal;
+    }
+  }
+}

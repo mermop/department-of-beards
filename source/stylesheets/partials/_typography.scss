@@ -11,3 +11,8 @@ a {
 .t-strong {
   font-weight: bold;
 }
+
+.t-hr {
+  border: 1px solid $light-grey;
+  margin: $gutter auto;
+}
