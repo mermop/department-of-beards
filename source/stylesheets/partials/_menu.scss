@@ -1,9 +1,10 @@
 .c-menu {
-  height: $menu-height;
+  min-height: $menu-height;
   font-family: $body-font;
   background-color: $teal;
   padding: $gutter;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   position: fixed;
   width: 100%;
@@ -11,8 +12,12 @@
     color: #FFF;
     font-weight: bold;
     text-decoration: none;
-    &:hover, &:active, &.current {
+    padding-left: $gutter;
+    &:hover, &:active, &--current {
       color: #000;
+    }
+    &--fixed-width {
+      width: 200px;
     }
   }
   &__room {
