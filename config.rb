@@ -7,6 +7,12 @@ end
 
 activate :directory_indexes
 
+activate :external_pipeline,
+          name: :webpack,
+          command: build? ? "npm run build" : "npm run watch",
+          source: ".tmp/dist",
+          latency: 1
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 

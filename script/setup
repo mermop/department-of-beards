@@ -1,3 +1,4 @@
 cp .env.development.example .env.development
 cp .env.build.example .env.build
 bundle install
+npm install

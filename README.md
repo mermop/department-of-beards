@@ -3,7 +3,7 @@
 
 This is the front-end for the website for the Department of Beards, a sub-department of the [Australian Tax Office](https://www.ato.gov.au/) (ATO) responsible for collecting the Australian Beard Tax (ABT).
 
-It is a generated website using [Middleman](https://middlemanapp.com/).
+It is a generated website using [Middleman](https://middlemanapp.com/). It uses Webpacker and NPM to manage Javascript.
 
 ## Running Locally
 
