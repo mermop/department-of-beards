@@ -13,6 +13,13 @@ activate :external_pipeline,
           source: ".tmp/dist",
           latency: 1
 
+configure :build do
+  # Relative assets needed to deploy to Github Pages
+  activate :relative_assets
+  set :site_url, "/department-of-beards"
+  activate :minify_css
+end
+
 activate :deploy do |config|
   config.deploy_method = :git
   config.branch = "gh-pages"
@@ -53,8 +60,3 @@ page '/*.txt', layout: false
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
-
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
